@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AGRY-XCHANGE</title>
+
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+  font-family:Arial,sans-serif;
+}
+
+body{
+  background:#f4f8f3;
+  color:#17351d;
+}
+
+header{
+  background:#14532d;
+  color:white;
+  padding:18px 6%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:15px;
+}
+
+.logo{
+  font-size:25px;
+  font-weight:bold;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  margin:0 8px;
+}
+
+.hero{
+  text-align:center;
+  padding:65px 7%;
+  background:linear-gradient(135deg,#dff5df,#ffffff);
+}
+
+.hero h1{
+  font-size:42px;
+  color:#14532d;
+  margin-bottom:15px;
+}
+
+.hero p{
+  max-width:750px;
+  margin:auto;
+  font-size:18px;
+  color:#4b6350;
+}
+
+.btn{
+  border:0;
+  padding:12px 22px;
+  border-radius:8px;
+  background:#16a34a;
+  color:white;
+  font-weight:bold;
+  cursor:pointer;
+  margin-top:18px;
+}
+
+.btn:hover{
+  background:#15803d;
+}
+
+section{
+  padding:50px 7%;
+}
+
+.title{
+  text-align:center;
+  margin-bottom:30px;
+}
+
+.title h2{
+  color:#14532d;
+  font-size:30px;
+}
+
+.roles{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
+
+.card{
+  background:white;
+  padding:25px;
+  border-radius:12px;
+  box-shadow:0 4px 15px rgba(0,0,0,.08);
+  text-align:center;
+}
+
+.card h3{
+  color:#166534;
+  margin-bottom:10px;
+}
+
+.form-box{
+  max-width:700px;
+  margin:auto;
+  background:white;
+  padding:28px;
+  border-radius:12px;
+  box-shadow:0 4px 15px rgba(0,0,0,.08);
+}
+
+label{
+  display:block;
+  margin-top:15px;
+  font-weight:bold;
+}
+
+input,select,textarea{
+  width:100%;
+  padding:12px;
+  margin-top:7px;
+  border:1px solid #cbd5cb;
+  border-radius:7px;
+  font-size:15px;
+}
+
+textarea{
+  min-height:120px;
+  resize:vertical;
+}
+
+.note{
+  background:#fff8db;
+  border-left:5px solid #d4a800;
+  padding:15px;
+  margin-top:20px;
+  border-radius:7px;
+  font-size:14px;
+}
+
+.success{
+  display:none;
+  margin-top:20px;
+  background:#dcfce7;
+  color:#166534;
+  padding:15px;
+  border-radius:8px;
+  font-weight:bold;
+}
+
+.flow{
+  max-width:800px;
+  margin:auto;
+}
+
+.flow-step{
+  background:white;
+  padding:20px;
+  margin:12px 0;
+  border-left:5px solid #16a34a;
+  border-radius:8px;
+  box-shadow:0 3px 10px rgba(0,0,0,.05);
+}
+
+.professor{
+  background:#eaf6ea;
+}
+
+footer{
+  background:#0b2e18;
+  color:white;
+  text-align:center;
+  padding:25px;
+  font-size:14px;
+}
+
+.small{
+  font-size:13px;
+  color:#647567;
+  margin-top:8px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">🌱 AGRY-XCHANGE</div>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#problem">Report Problem</a>
+    <a href="#flow">How It Works</a>
+    <a href="#roles">Users</a>
+  </nav>
+</header>
+
+
+<!-- HOME -->
+
+<section class="hero" id="home">
+
+  <h1>AGRY-XCHANGE</h1>
+
+  <p>
+    A community-based agriculture platform where farmers can
+    share crop problems and receive solutions from students,
+    with professor verification and community feedback.
+  </p>
+
+  <a href="#problem">
+    <button class="btn">Report a Crop Problem</button>
+  </a>
+
+</section>
+
+
+<!-- USERS -->
+
+<section id="roles">
+
+  <div class="title">
+    <h2>Who Can Use AGRY-XCHANGE?</h2>
+    <p class="small">
+      The core user roles of the AGRY-XCHANGE concept
+    </p>
+  </div>
+
+  <div class="roles">
+
+    <div class="card">
+      <h3>👨‍🌾 Farmer</h3>
+      <p>
+        Shares crop problems, photos and relevant information
+        and can provide feedback on solutions.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>🎓 Student</h3>
+      <p>
+        Can contribute agriculture-related solutions and
+        participate through community voting.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>👨‍🏫 Professor</h3>
+      <p>
+        Reviews submitted solutions and provides verification
+        before a solution receives final status.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- PROBLEM FORM -->
+
+<section id="problem">
+
+  <div class="title">
+    <h2>🌾 Report a Crop Problem</h2>
+    <p>
+      Farmers can submit details about their agricultural problem.
+    </p>
+  </div>
+
+  <div class="form-box">
+
+    <label>Farmer Name</label>
+    <input
+      type="text"
+      id="farmerName"
+      placeholder="Enter your name"
+    >
+
+    <label>Crop</label>
+    <input
+      type="text"
+      id="crop"
+      placeholder="Example: Paddy, Cotton, Maize"
+    >
+
+    <label>Describe the Problem</label>
+    <textarea
+      id="problemText"
+      placeholder="Explain what is happening to your crop..."
+    ></textarea>
+
+    <label>Voice Description</label>
+    <input type="file" accept="audio/*">
+
+    <label>Problem Photo</label>
+    <input type="file" accept="image/*">
+
+    <label>Phone Number</label>
+    <input
+      type="tel"
+      placeholder="Phone number"
+    >
+
+    <label>
+      <input
+        type="checkbox"
+        id="consent"
+        style="width:auto;margin-right:8px;"
+      >
+      I give consent to share the submitted information.
+    </label>
+
+    <div class="note">
+      ⚠️ Do not share phone numbers publicly without consent.
+    </div>
+
+    <button class="btn" onclick="submitProblem()">
+      Submit Problem
+    </button>
+
+    <div class="success" id="successMessage">
+      ✅ Problem submitted successfully!
+      <br>
+      Your problem can now move to the solution stage.
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- HOW IT WORKS -->
+
+<section id="flow">
+
+  <div class="title">
+    <h2>🔄 How AGRY-XCHANGE Works</h2>
+  </div>
+
+  <div class="flow">
+
+    <div class="flow-step">
+      <strong>1️⃣ Farmer Reports Problem</strong>
+      <p>
+        Farmer enters crop details, problem description,
+        voice information and photo.
+      </p>
+    </div>
+
+    <div class="flow-step">
+      <strong>2️⃣ Problem Gets an ID</strong>
+      <p>
+        Each submitted problem can be identified using a
+        unique problem ID.
+      </p>
+    </div>
+
+    <div class="flow-step">
+      <strong>3️⃣ Students Contribute Solutions</strong>
+      <p>
+        Students can provide possible solutions related
+        to the reported problem.
+      </p>
+    </div>
+
+    <div class="flow-step">
+      <strong>4️⃣ Evidence Can Be Added</strong>
+      <p>
+        Field photos and bill photos can support the
+        submitted solution.
+      </p>
+    </div>
+
+    <div class="flow-step">
+      <strong>5️⃣ Farmer Rating & Student Votes</strong>
+      <p>
+        Community feedback can help evaluate submitted
+        solutions.
+      </p>
+    </div>
+
+    <div class="flow-step">
+      <strong>6️⃣ Professor Verification</strong>
+      <p>
+        A professor can review the solution and provide
+        verification.
+      </p>
+    </div>
+
+    <div class="flow-step">
+      <strong>7️⃣ Final Status</strong>
+      <p>
+        After the review process, the solution can receive
+        its final status.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- PROFESSOR -->
+
+<section class="professor">
+
+  <div class="title">
+    <h2>👨‍🏫 Professor Verification</h2>
+
+    <p>
+      Solutions can be reviewed before receiving final status.
+    </p>
+  </div>
+
+  <div class="form-box">
+
+    <label>Problem ID</label>
+    <input
+      type="text"
+      placeholder="Enter problem ID"
+    >
+
+    <label>Solution ID</label>
+    <input
+      type="text"
+      placeholder="Enter solution ID"
+    >
+
+    <label>Verification Status</label>
+
+    <select>
+      <option>Select status</option>
+      <option>Verified</option>
+      <option>Needs Review</option>
+      <option>Not Verified</option>
+    </select>
+
+    <label>Professor Note</label>
+
+    <textarea
+      placeholder="Enter verification note..."
+    ></textarea>
+
+    <button class="btn">
+      Submit Verification
+    </button>
+
+  </div>
+
+</section>
+
+
+<!-- DISCLAIMER -->
+
+<section>
+
+  <div class="note">
+
+    <strong>⚠️ Important Disclaimer</strong>
+
+    <p style="margin-top:8px;">
+      This is a student project. Information shared by
+      farmers and students is community experience, not
+      professional advice. Please verify with a local
+      agriculture officer before use.
+    </p>
+
+  </div>
+
+</section>
+
+
+<footer>
+
+  <p>© 2026 AGRY-XCHANGE</p>
+
+  <p style="margin-top:6px;">
+    Smart Community Agriculture Platform
+  </p>
+
+</footer>
+
+
+<script>
+
+function submitProblem(){
+
+  const farmer =
+    document.getElementById("farmerName").value;
+
+  const crop =
+    document.getElementById("crop").value;
+
+  const problem =
+    document.getElementById("problemText").value;
+
+  const consent =
+    document.getElementById("consent").checked;
+
+  if(
+    farmer === "" ||
+    crop === "" ||
+    problem === ""
+  ){
+
+    alert("Please fill Farmer Name, Crop and Problem.");
+
+    return;
+  }
+
+  if(!consent){
+
+    alert("Please provide consent before submitting.");
+
+    return;
+  }
+
+  document.getElementById("successMessage").style.display =
+    "block";
+
+}
+
+</script>
+
+</body>
+  </html>
